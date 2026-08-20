@@ -1,0 +1,62 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.*
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python packaging/build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+.Python
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+
+# Chroma DB / vector store data
+chroma/
+vector_db/
+chroma_db/
+*.db
+*.sqlite3
+
+# PDF / uploaded documents (if generated locally)
+pdfs/
+uploads/
+data/
+*.pdf
+
+# Logs
+*.log
+logs/
+
+# Local configuration / secrets
+secrets/
+config.local.*
+
