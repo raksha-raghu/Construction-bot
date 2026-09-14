@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "collection": "construction_catalogs",
+  "chunk_count": 681,
+  "corpus_sha256": "fde9836bf1aa8e90f93a51e01fa17e4f0d68a48b140de99e7c31c4e2fb70e742",
+  "collection_metadata": {
+    "hnsw:space": "cosine"
+  },
+  "started_at_utc": "2026-09-14T17:17:38.247314+00:00",
+  "method": "all",
+  "dataset_path": "P:\\chat_bot\\Construction-RAG-bot\\backend\\evaluation\\evaluation_dataset.json",
+  "dataset_sha256": "63a1b8a4dd2124ad1a8947ce99caa5d9881af3be3e53f71f90ab5d5a821c75d8",
+  "python_version": "3.13.15",
+  "packages": {
+    "chromadb": "1.5.9",
+    "sentence-transformers": "5.7.0",
+    "rank-bm25": "0.2.2"
+  },
+  "embedding_model": "all-MiniLM-L6-v2",
+  "setup_ms": 9707.110700008343,
+  "warmup": false,
+  "mrr_cutoff": 5,
+  "relevance_rule": "source in expected_sources AND (expected_pages empty OR page in expected_pages)",
+  "latency_scope": "retrieval only; excludes setup and report writing",
+  "fusion": {
+    "method": "rrf",
+    "rrf_k": 60,
+    "equal_weights": true,
+    "candidate_k": 20,
+    "keyword_filter": "at least one query token overlaps"
+  },
+  "top_k": 5,
+  "methods": {
+    "rag": {
+      "overall": {
+        "n_queries": 30,
+        "hit_at_1": 0.36666666666666664,
+        "hit_at_3": 0.7,
+        "hit_at_5": 0.8,
+        "mrr": 0.5455555555555556,
+        "mean_latency_ms": 12.289640000866106
+      },
+      "by_query_type": {
+        "application": {
+          "n_queries": 4,
+          "hit_at_1": 0.5,
+          "hit_at_3": 0.5,
+          "hit_at_5": 0.75,
+          "mrr": 0.5625,
+          "mean_latency_ms": 14.356625008076662
+        },
+        "exact_keyword": {
+          "n_queries": 7,
+          "hit_at_1": 0.2857142857142857,
+          "hit_at_3": 0.42857142857142855,
+          "hit_at_5": 0.7142857142857143,
+          "mrr": 0.3976190476190476,
+          "mean_latency_ms": 12.311714285585497
+        },
+        "numerical": {
+          "n_queries": 10,
+          "hit_at_1": 0.2,
+          "hit_at_3": 0.8,
+          "hit_at_5": 0.8,
+          "mrr": 0.48333333333333334,
+          "mean_latency_ms": 11.996759999601636
+        },
+        "semantic_paraphrase": {
+          "n_queries": 3,
+          "hit_at_1": 0.3333333333333333,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 0.6666666666666666,
+          "mean_latency_ms": 11.535066664995005
+        },
+        "technical_property": {
+          "n_queries": 6,
+          "hit_at_1": 0.6666666666666666,
+          "hit_at_3": 0.8333333333333334,
+          "hit_at_5": 0.8333333333333334,
+          "mrr": 0.75,
+          "mean_latency_ms": 11.751316667262776
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "n_queries": 11,
+          "hit_at_1": 0.36363636363636365,
+          "hit_at_3": 0.7272727272727273,
+          "hit_at_5": 0.9090909090909091,
+          "mrr": 0.5757575757575758,
+          "mean_latency_ms": 12.327236365473999
+        },
+        "hard": {
+          "n_queries": 2,
+          "hit_at_1": 0.5,
+          "hit_at_3": 0.5,
+          "hit_at_5": 1,
+          "mrr": 0.6,
+          "mean_latency_ms": 13.275550001708325
+        },
+        "medium": {
+          "n_queries": 17,
+          "hit_at_1": 0.35294117647058826,
+          "hit_at_3": 0.7058823529411765,
+          "hit_at_5": 0.7058823529411765,
+          "mrr": 0.5196078431372549,
+          "mean_latency_ms": 12.149323529550148
+        }
+      },
+      "failed_queries": 6
+    },
+    "bm25": {
+      "overall": {
+        "n_queries": 30,
+        "hit_at_1": 0.5666666666666667,
+        "hit_at_3": 0.9,
+        "hit_at_5": 0.9666666666666667,
+        "mrr": 0.7388888888888889,
+        "mean_latency_ms": 2.3557500001819185
+      },
+      "by_query_type": {
+        "application": {
+          "n_queries": 4,
+          "hit_at_1": 0.5,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 0.7083333333333334,
+          "mean_latency_ms": 2.221200003987178
+        },
+        "exact_keyword": {
+          "n_queries": 7,
+          "hit_at_1": 0.5714285714285714,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 0.7619047619047619,
+          "mean_latency_ms": 2.7188428565360874
+        },
+        "numerical": {
+          "n_queries": 10,
+          "hit_at_1": 0.4,
+          "hit_at_3": 0.8,
+          "hit_at_5": 1,
+          "mrr": 0.65,
+          "mean_latency_ms": 2.1560400040470995
+        },
+        "semantic_paraphrase": {
+          "n_queries": 3,
+          "hit_at_1": 1,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 1.0,
+          "mean_latency_ms": 2.2815666598035023
+        },
+        "technical_property": {
+          "n_queries": 6,
+          "hit_at_1": 0.6666666666666666,
+          "hit_at_3": 0.8333333333333334,
+          "hit_at_5": 0.8333333333333334,
+          "mrr": 0.75,
+          "mean_latency_ms": 2.391783328979121
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "n_queries": 11,
+          "hit_at_1": 0.5454545454545454,
+          "hit_at_3": 0.9090909090909091,
+          "hit_at_5": 1,
+          "mrr": 0.7348484848484849,
+          "mean_latency_ms": 2.1025909095028923
+        },
+        "hard": {
+          "n_queries": 2,
+          "hit_at_1": 0.5,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 0.6666666666666666,
+          "mean_latency_ms": 3.399150002223905
+        },
+        "medium": {
+          "n_queries": 17,
+          "hit_at_1": 0.5882352941176471,
+          "hit_at_3": 0.8823529411764706,
+          "hit_at_5": 0.9411764705882353,
+          "mrr": 0.75,
+          "mean_latency_ms": 2.39680588214576
+        }
+      },
+      "failed_queries": 1
+    },
+    "hybrid": {
+      "overall": {
+        "n_queries": 30,
+        "hit_at_1": 0.5333333333333333,
+        "hit_at_3": 0.8333333333333334,
+        "hit_at_5": 0.9333333333333333,
+        "mrr": 0.6883333333333334,
+        "mean_latency_ms": 15.485946669165665
+      },
+      "by_query_type": {
+        "application": {
+          "n_queries": 4,
+          "hit_at_1": 0.5,
+          "hit_at_3": 0.75,
+          "hit_at_5": 1,
+          "mrr": 0.6875,
+          "mean_latency_ms": 17.41742501326371
+        },
+        "exact_keyword": {
+          "n_queries": 7,
+          "hit_at_1": 0.42857142857142855,
+          "hit_at_3": 0.7142857142857143,
+          "hit_at_5": 0.8571428571428571,
+          "mrr": 0.5761904761904761,
+          "mean_latency_ms": 15.8134714292828
+        },
+        "numerical": {
+          "n_queries": 10,
+          "hit_at_1": 0.5,
+          "hit_at_3": 0.9,
+          "hit_at_5": 1,
+          "mrr": 0.6866666666666666,
+          "mean_latency_ms": 14.999970005010255
+        },
+        "semantic_paraphrase": {
+          "n_queries": 3,
+          "hit_at_1": 0.6666666666666666,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 0.8333333333333334,
+          "mean_latency_ms": 14.636499991562838
+        },
+        "technical_property": {
+          "n_queries": 6,
+          "hit_at_1": 0.6666666666666666,
+          "hit_at_3": 0.8333333333333334,
+          "hit_at_5": 0.8333333333333334,
+          "mrr": 0.75,
+          "mean_latency_ms": 15.050866665357413
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "n_queries": 11,
+          "hit_at_1": 0.6363636363636364,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 0.7878787878787878,
+          "mean_latency_ms": 15.28493636446497
+        },
+        "hard": {
+          "n_queries": 2,
+          "hit_at_1": 0.5,
+          "hit_at_3": 1,
+          "hit_at_5": 1,
+          "mrr": 0.75,
+          "mean_latency_ms": 17.629699999815784
+        },
+        "medium": {
+          "n_queries": 17,
+          "hit_at_1": 0.47058823529411764,
+          "hit_at_3": 0.7058823529411765,
+          "hit_at_5": 0.8823529411764706,
+          "mrr": 0.6166666666666667,
+          "mean_latency_ms": 15.363805886248455
+        }
+      },
+      "failed_queries": 2
+    }
+  }
+}

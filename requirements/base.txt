@@ -1,0 +1,4 @@
+chromadb
+pdfplumber
+sentence-transformers
+rank-bm25

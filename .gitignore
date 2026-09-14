@@ -46,11 +46,7 @@ chroma_db/
 *.db
 *.sqlite3
 
-# PDF / uploaded documents (if generated locally)
-pdfs/
-uploads/
-data/
-*.pdf
+
 
 # Logs
 *.log
@@ -59,4 +55,3 @@ logs/
 # Local configuration / secrets
 secrets/
 config.local.*
-

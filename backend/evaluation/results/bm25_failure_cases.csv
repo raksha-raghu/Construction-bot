@@ -1,0 +1,2 @@
+﻿id,query,query_type,difficulty,expected_sources,expected_pages,first_relevant_rank,hit_at_1,hit_at_3,hit_at_5,mrr,latency_ms,top1_source,top1_page,top1_bm25_score
+Q023,What materials are used to make fermacell fibre gypsum board?,technical_property,medium,fer-090-00032_9172-GB Specification Guide.pdf,6,,0,0,0,0.0,4.806,fer-090-00032_9172-GB Specification Guide.pdf,3,15.3354

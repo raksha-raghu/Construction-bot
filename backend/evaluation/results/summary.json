@@ -1,0 +1,81 @@
+{
+  "retrieval_method": "dense_semantic",
+  "top_k": 5,
+  "overall": {
+    "n_queries": 30,
+    "hit_at_1": 0.36666666666666664,
+    "hit_at_3": 0.7,
+    "hit_at_5": 0.8,
+    "mrr": 0.5455555555555556,
+    "mean_latency_ms": 98.31666666666666
+  },
+  "by_query_type": {
+    "application": {
+      "n_queries": 4,
+      "hit_at_1": 0.5,
+      "hit_at_3": 0.5,
+      "hit_at_5": 0.75,
+      "mrr": 0.5625,
+      "mean_latency_ms": 522.3125
+    },
+    "exact_keyword": {
+      "n_queries": 7,
+      "hit_at_1": 0.2857142857142857,
+      "hit_at_3": 0.42857142857142855,
+      "hit_at_5": 0.7142857142857143,
+      "mrr": 0.3976190476190476,
+      "mean_latency_ms": 34.57142857142857
+    },
+    "numerical": {
+      "n_queries": 10,
+      "hit_at_1": 0.2,
+      "hit_at_3": 0.8,
+      "hit_at_5": 0.8,
+      "mrr": 0.48333333333333334,
+      "mean_latency_ms": 31.723
+    },
+    "semantic_paraphrase": {
+      "n_queries": 3,
+      "hit_at_1": 0.3333333333333333,
+      "hit_at_3": 1,
+      "hit_at_5": 1,
+      "mrr": 0.6666666666666666,
+      "mean_latency_ms": 26.666666666666668
+    },
+    "technical_property": {
+      "n_queries": 6,
+      "hit_at_1": 0.6666666666666666,
+      "hit_at_3": 0.8333333333333334,
+      "hit_at_5": 0.8333333333333334,
+      "mrr": 0.75,
+      "mean_latency_ms": 36.836666666666666
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "n_queries": 11,
+      "hit_at_1": 0.36363636363636365,
+      "hit_at_3": 0.7272727272727273,
+      "hit_at_5": 0.9090909090909091,
+      "mrr": 0.5757575757575758,
+      "mean_latency_ms": 208.90454545454546
+    },
+    "hard": {
+      "n_queries": 2,
+      "hit_at_1": 0.5,
+      "hit_at_3": 0.5,
+      "hit_at_5": 1,
+      "mrr": 0.6,
+      "mean_latency_ms": 61.105000000000004
+    },
+    "medium": {
+      "n_queries": 17,
+      "hit_at_1": 0.35294117647058826,
+      "hit_at_3": 0.7058823529411765,
+      "hit_at_5": 0.7058823529411765,
+      "mrr": 0.5196078431372549,
+      "mean_latency_ms": 31.13764705882353
+    }
+  },
+  "failed_queries": 6
+}
